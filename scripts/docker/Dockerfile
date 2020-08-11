@@ -38,7 +38,7 @@ RUN mkdir -p /vault/logs && \
     mkdir -p /vault/file && \
     mkdir -p /vault/config && \
     chown -R vault:vault /vault
-
+RUN /usr/sbin/setcap cap_ipc_lock=+ep /bin/vault
 # Expose the logs directory as a volume since there's potentially long-running
 # state in there
 VOLUME /vault/logs
