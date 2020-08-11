@@ -3,7 +3,7 @@
 # we're explicitly compiling for 'linux/amd64'
 ARG VERSION=1.13.10
 
-FROM golang:${VERSION} AS builder
+FROM golang:1.13.10 AS builder
 
 ARG CGO_ENABLED=0
 ARG BUILD_TAGS
